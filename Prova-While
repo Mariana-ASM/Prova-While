@@ -1,0 +1,24 @@
+def jogo_adivinhacao():
+    numero_secreto = 5
+    tentativas = 0
+    max_tentativas = 3
+    
+    print("Bem-vindo ao jogo de adivinhação!")
+    print("Tente adivinhar o número secreto entre 1 e 10.")
+    
+    while tentativas < max_tentativas:
+        
+        palpite = int(input("Insira seu palpite: "))
+        tentativas += 1
+        
+        if palpite == numero_secreto:
+            print(f"Parabéns! Você acertou o número {numero_secreto} na tentativa {tentativas}!")
+            break
+        else:
+            print("Palpite errado. Tente novamente.")
+    
+    # Mensagem de consolo caso as 3 tentativas se esgotem sem sucesso
+    else:
+        print(f"Suas tentativas acabaram. O número secreto era {numero_secreto}. Boa sorte na próxima vez!")
+
+jogo_adivinhacao()
